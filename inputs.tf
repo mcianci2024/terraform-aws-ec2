@@ -4,12 +4,18 @@
 # Terraform Module - AWS EC2
 
 
-variable "create" {
+variable "create_instance" {
   description = "Whether to create an instance"
   type        = bool
   default     = true
 }
 
+
+variable "create_instance_spot" {
+  description = "Whether to create an instance spot"
+  type        = bool
+  default     = false
+}
 
 variable "name" {
   description = "Name to be used on EC2 instance created"
