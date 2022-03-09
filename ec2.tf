@@ -28,7 +28,7 @@ resource "aws_instance" "ec2" {
 
     associate_public_ip_address = var.associate_public_ip_address
     private_ip                  = var.private_ip
-    secondary_private_ips       = var.secondary_private_ip
+    secondary_private_ips       = var.secondary_private_ips
 
     ebs_optimized               = var.ebs_optimized
 
