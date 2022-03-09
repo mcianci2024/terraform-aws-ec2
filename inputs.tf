@@ -75,7 +75,7 @@ variable "monitoring" {
   default     = false
 }
 
-ariable "private_ip" {
+variable "private_ip" {
   description = "Private IP address to associate with the instance in a VPC"
   type        = string
   default     = null
