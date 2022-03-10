@@ -21,7 +21,7 @@ resource "aws_instance" "ec2" {
     subnet_id                   = var.subnet_id
     vpc_security_group_ids      = var.vpc_security_group_ids
 
-    key_name                    = var.key_name
+    key_name                    = aws_key_pair.key.key_name
     monitoring                  = var.monitoring
     get_password_data           = var.get_password_data
     iam_instance_profile        = var.iam_instance_profile
@@ -48,6 +48,6 @@ resource "aws_instance" "ec2" {
         }
     }
 
-    tags = merge({ "Name" = var.name }, var.tags )
+    tags = merge({ "Name" = var.ec2_name }, var.tags )
   
 }

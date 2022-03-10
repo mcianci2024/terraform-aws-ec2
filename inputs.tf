@@ -3,7 +3,7 @@
 # Date: Qua 9 Mar 2022
 # Terraform Module - AWS EC2
 
-
+### AWS EC2 ###
 variable "create_instance" {
   description = "Whether to create an instance"
   type        = bool
@@ -17,7 +17,7 @@ variable "create_instance_spot" {
   default     = false
 }
 
-variable "name" {
+variable "ec2_name" {
   description = "Name to be used on EC2 instance created"
   type        = string
   default     = ""
@@ -66,14 +66,6 @@ variable "instance_type" {
   type        = string
   default     = "t3.micro"
 }
-
-
-variable "key_name" {
-  description = "Key name of the Key Pair to use for the instance; which can be managed using the `aws_key_pair` resource"
-  type        = string
-  default     = null
-}
-
 
 variable "monitoring" {
   description = "If true, the launched EC2 instance will have detailed monitoring enabled"
