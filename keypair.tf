@@ -4,7 +4,7 @@
 # Terraform Module - AWS EC2 - KEY PAIR
 
 
-resource "aws_key_pair" "keypair" {
+resource "aws_key_pair" "key" {
 
     key_name    = "${var.ec2_name}${terraform.workspace}"
     public_key  = tls_private_key.tls.public_key_openssh
