@@ -135,3 +135,14 @@ variable "cpu_threads_per_core" {
   type        = number
   default     = null
 }
+
+variable "ephemeral_block_device" {
+  description = "Customize Ephemeral (also known as Instance Store) volumes on the instance"
+  type        = list(map(string))
+  default     = []
+}
+variable "ebs_block_device" {
+  description = "Additional EBS block devices to attach to the instance"
+  type        = list(map(string))
+  default     = []
+}
