@@ -3,10 +3,10 @@
 # Date: Qua 9 Mar 2022
 # Terraform Module - AWS EC2
 
-#output "id" {
-#  description = "The ID of the instance"
-#  value       = try(aws_instance.this[0].id, aws_spot_instance_request.this[0].id, "")
-#}
+output "id" {
+  description = "The ID of the instance"
+  value       = try(aws_instance.ec2[0].id, "")
+}
 #
 #output "arn" {
 #  description = "The ARN of the instance"
