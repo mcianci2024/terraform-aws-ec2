@@ -1,9 +1,9 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: Terraform AWS EC2
-  description: Modules Terraform AWS EC2
+  name: "Terraform AWS EC2"
+  description: "Modules Terraform AWS EC2"
 spec:
-  type: library
+  type: service
   lifecycle: production
   owner: platform
